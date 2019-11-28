@@ -1,0 +1,29 @@
+func drawBox() {
+	var p int = 100
+
+	for j := 0; j < 10; j++ {
+		fmt.Printf("+-----")
+	}
+	fmt.Printf("+\n")
+	for i := 0; i < 10; i++ {
+		if i%2 == 0 {
+			for j := 0; j < 10; j++ {
+				fmt.Printf("|%5d", p)
+				p--
+			}
+			p = p - 9
+			fmt.Printf("|\n")
+		} else {
+			for j := 0; j < 10; j++ {
+				fmt.Printf("|%5d", p)
+				p++
+			}
+			p = p - 11
+			fmt.Printf("|\n")
+		}
+		for j := 0; j < 10; j++ {
+			fmt.Printf("+-----")
+		}
+		fmt.Printf("+\n")
+	}
+}
